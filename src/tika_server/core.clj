@@ -9,7 +9,10 @@
 
 (defn handler 
   [request]
-  (let [url (URLDecoder/decode (:query-string request))]
+  (let [query (URLDecoder/decode (:query-string request))
+        parts (s/split query #"=" 2)
+        url   (nth parts 1)
+       ]
     (try 
       {:status 200
        :headers {"Content-Type" "application/json"}

@@ -10,7 +10,7 @@ server:
 
 client (HTTP GET):
 
-    http://IP_SERVICE:9998/?URLENCODED_URL_FOR_TIKA_TO_PARSE
+    http://IP_SERVICE:9998/?doc=URLENCODED_URL_FOR_TIKA_TO_PARSE
 
 do not forgot the `?`
 
@@ -18,7 +18,7 @@ do not forgot the `?`
 for instance test:
 
     lein run
-    curl -X GET http://127.0.0.1:9998/?https%3A%2F%2Fgithub.com%2Fring-clojure%2Fring%2Fwiki%2FGetting-Started
+    curl -X GET http://127.0.0.1:9998/?doc=https%3A%2F%2Fgithub.com%2Fring-clojure%2Fring%2Fwiki%2FGetting-Started
 
 ## License
 

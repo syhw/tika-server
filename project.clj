@@ -1,5 +1,5 @@
 (defproject tika-server "1.0.0-SNAPSHOT"
-  :description "listen on port 42042 and pass work to Tika"
+  :description "listen on port 9998 and pass work to Tika"
   :dev-dependencies [[vimclojure/server "2.3.6"]]
   :dependencies [[org.clojure/clojure "1.4.0"]
                  [clj-tika "1.2.0"]

@@ -10,7 +10,6 @@
 (defn handler 
   [request]
   (let [url (URLDecoder/decode (:query-string request))]
-    (prn (:text (tika/parse url))) ; TODO remove
     (try 
       {:status 200
        :headers {"Content-Type" "application/json"}

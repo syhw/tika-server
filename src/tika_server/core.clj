@@ -6,6 +6,11 @@
         [cheshire.core])
   (:gen-class))
 
+(defn clean-text
+  " Removes \n \t and html fields that passed through tika (#{header}...) "
+  [text]
+  (s/replace (s/replace 
+               (s/replace text #"\n" " ") #"\t" " ") #"#\{[^}]*\}" " "))
 
 (defn handler 
   [request]
@@ -17,7 +22,7 @@
       {:status 200
        :headers {"Content-Type" "application/json"}
        :body (generate-string {:status "success",
-                               :retval (:text (tika/parse url))})
+                               :retval (clean-text (:text (tika/parse url)))})
        }
       (catch Exception e 
         {:status 400, 

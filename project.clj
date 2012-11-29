@@ -3,6 +3,7 @@
   :dev-dependencies [[vimclojure/server "2.3.6"]]
   :dependencies [[org.clojure/clojure "1.4.0"]
                  [clj-tika "1.2.0"]
-                 [ring-server "0.2.5"]]
+                 [ring-server "0.2.5"]
+                 [cheshire "4.0.3"]]
                   ;[ring/ring-core "1.1.6"]]
   :main "tika-server.core")

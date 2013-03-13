@@ -3,8 +3,8 @@
             [clojure.string :as s])
   (:import [java.net URLDecoder])
   (:use [ring.server.standalone]
-        [cheshire.core])
-  (:gen-class))
+        [cheshire.core]
+  (:gen-class)))
 
 (defn clean-text
   " Removes \n \t and html fields that passed through tika (#{header}...) "
